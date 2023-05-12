@@ -1,0 +1,95 @@
+{
+  "ads": [
+    {
+      "id": 0,
+      "ownerId": 0,
+      "name": "Nissan Grand livina 1.5 XV Facelift",
+      "brand": "Nissan",
+      "year": 2014,
+      "color": "Silver",
+      "desc": "Warna Silver Metalik | STNK dan BPKB asli & sesuai | Pajak Agustus 2023 - Plat Ganjil Depok | Tangan pertama perorangan | Odometer 93.xxx",
+      "location": "Karawang",
+      "photo": "https://apollo-singapore.akamaized.net/v1/files/lw3ls5xhslvf-ID/image;s=1080x1080",
+      "price": 118000000,
+      "sold": true
+    },
+    {
+      "id": 1,
+      "ownerId": 2,
+      "name": "Toyota Yaris 1.5 G 2020 Putih",
+      "brand": "Toyota",
+      "year": 2020,
+      "color": "Putih",
+      "desc": "STNK dan BPKB asli a/n: perorangan | Odometer : 1460 Km | Pajak : | Plat : Ganjil | KN : 1JW",
+      "location": "Depok",
+      "photo": "https://apollo-singapore.akamaized.net/v1/files/br8wnoqjaa1l1-ID/image;s=1080x1080",
+      "price": 199000000,
+      "sold": false
+    },
+    {
+      "id": 2,
+      "ownerId": 1,
+      "name": "Mazda 3 Grey 2019",
+      "brand": "Mazda",
+      "year": 2019,
+      "color": "Grey",
+      "desc": "Jual cepat Mazda3,Th2019,Akhir,full option,Grey.  Km15rban(asli)serv rec Honda,on going. Mobil masi wangi baru,simpanan.seperti beli mobil baru.  bebas repaint, banjir n nabrak. Tipe tertinggi sudah sunroof, jok kulit, velg rec, dll.",
+      "location": "Karawang",
+      "photo": "https://apollo-singapore.akamaized.net/v1/files/qiqomz47ocfl3-ID/image;s=1080x1080",
+      "price": 352000000,
+      "sold": false
+    },
+    {
+      "id": 3,
+      "ownerId": 3,
+      "name": "Honda Br-V (2021)",
+      "brand": "Honda",
+      "year": 2021,
+      "color": "Putih",
+      "desc": "perakitan / NIK: 2021 | pemakaian 2021 | Nomor Polisi A 1538 RQ / GENAP | Pajak Sampai 11/2023 | KM 16.xxx | A/n. Perorangan dari Baru",
+      "location": "Jakarta Selatan",
+      "photo": "https://apollo-singapore.akamaized.net/v1/files/0kcva776n8it2-ID/image;s=1080x1080",
+      "price": 208000000,
+      "sold": false
+    },
+    {
+      "id": 4,
+      "ownerId": 4,
+      "name": "Honda Hr-V Grey",
+      "brand": "Honda",
+      "year": 2017,
+      "color": "Grey",
+      "desc": "Plat Ganjil Jakarta Selatan | Tangan Pertama | Kilometer 65,898 | Warna Abu | Abu | Pajak Bulan April 2023 | STNK dan BPKB Asli dan Akur | Interior Original Pabrik | Head Unit Original | Velg dan Ban Original | Kaki | kaki Terawat | Bebas Banjir | Bebas Tabrak",
+      "location": "Jakarta Timur",
+      "photo": "https://apollo-singapore.akamaized.net/v1/files/2cecibykmef42-ID/image;s=1080x1080",
+      "price": 188000000,
+      "sold": true
+    },
+    {
+      "id": 5,
+      "ownerId": 5,
+      "name": "Toyota Avanza Merah 2018",
+      "brand": "Toyota",
+      "year": 2018,
+      "color": "Merah",
+      "desc": "Warna Merah | STNK dan BPKB asli & sesuai atas nama Perorangan | Pajak April 2024 | Plat Genap | Odometer 85,225 KM",
+      "location": "Tangerang Selatan",
+      "photo": "https://apollo-singapore.akamaized.net/v1/files/lc7xw3nv3f8s3-ID/image;s=1080x1080",
+      "price": 167000000,
+      "sold": true
+    },
+    {
+      "id": 6,
+      "ownerId": 1,
+      "name": "Bmw X1 Putih 2018",
+      "brand": "BMW",
+      "year": 2018,
+      "color": "Putih",
+      "desc": "BMW X1 F48 sDrive xLine | Panoramic Sunroof 2018 | Nik 2018 | Odo 31rb miles | Pajak 10 2023 | Plat Ganjil A 1215 CA | Panoramic Sunroof xLine | BSI Free Service ON | Tangan Pertama",
+      "location": "Jakarta Selatan",
+      "photo": "https://apollo-singapore.akamaized.net/v1/files/c8qrimc3ortd-ID/image;s=1080x1080",
+      "price": 535000000,
+      "sold": false
+    }
+  ]
+}

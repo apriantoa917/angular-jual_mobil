@@ -1,0 +1,16 @@
+td {
+    padding: 10px;
+}
+
+#ads-image {
+    height: 300px;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px 10px 0px 0px;
+}
+
+#ads-detail-container {
+    border-radius: 0px 0px 10px 10px;
+    background-color: var(--custom-light-gray);
+    border: rgb(215, 215, 215) 1px solid;
+}

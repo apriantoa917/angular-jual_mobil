@@ -1,0 +1,55 @@
+<section class="col">
+    <div class="card bg-light br-10 p-3 my-3 ">
+        <div class="row">
+            <div class="col-sm-3">
+                <img [src]="ads.photo" class="card-img-top img-responsive br-7" alt="Exterior photo of {{ads.photo}}">
+            </div>
+            <div class="col-sm-9">
+                <h5 class="fw-bold">{{ads.name}}</h5>
+                <hr>
+                <table class="table">
+                    <tr class="fw-bold text-primary">
+                        <td>Brand</td>
+                        <td>Tahun</td>
+                        <td>Warna</td>
+                        <td>Harga</td>
+                    </tr>
+                    <tr>
+                        <td>{{ads.brand}}</td>
+                        <td>{{ads.year}}</td>
+                        <td>{{ads.color}}</td>
+                        <td>{{ads.price | currency:'Rp':'symbol':'3.0'}}</td>
+
+                    <tr class="fw-bold text-primary">
+                        <td>Owner ID</td>
+                        <td>Lokasi</td>
+                        <td>Ketersediaan</td>
+                    </tr>
+                    <tr>
+                        <td>{{ads.ownerId}}</td>
+                        <td>{{ads.location}}</td>
+                        <td>
+                            <span *ngIf="!ads.sold" class="text-success"><i class="bi bi-check2-circle"></i>
+                                TERSEDIA</span>
+                            <span *ngIf="ads.sold" class="text-danger"><i class="bi bi-exclamation-octagon"></i>
+                                TERJUAL</span>
+                        </td>
+                    </tr>
+                </table>
+                <hr>
+                <span class="fw-bold">Action : </span>
+                <button type="button" class="btn btn-sm btn-outline-success me-2" (click)="viewAds()"><i
+                        class="bi bi-eye"></i>
+                    Lihat</button>
+                <button type="button" class="btn btn-sm btn-outline-primary me-2" (click)="editAds()"><i
+                        class="bi bi-pencil-square"></i>
+                    Edit</button>
+                <button type="button" class="btn btn-sm btn-outline-danger" (click)="deleteAds()"><i
+                        class="bi bi-trash"></i> Hapus</button>
+
+
+            </div>
+        </div>
+
+    </div>
+</section>

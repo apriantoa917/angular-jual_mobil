@@ -1,0 +1,105 @@
+<div class="container my-3 ">
+    <h5 class="my-4 p-3 bg-light br-10"><a [routerLink]="[ '/admin']" style="text-decoration: none;">
+            <i class="bi bi-arrow-left"></i> Dashboard Admin</a></h5>
+    <div class="card br-10 bg-light p-3">
+        <h3 class="mb-4 fw-bold">
+            <span *ngIf="action == 'new'">Posting Iklan Baru</span>
+            <span *ngIf="action == 'edit'">Edit Iklan "{{ads?.name}}"</span>
+        </h3>
+        <form [formGroup]="adsForm" (submit)="submittedForm()">
+            <div class="row">
+                <div class="col-sm-6">
+                    <!-- OWNER ID -->
+                    <div class="mb-3">
+                        <label for="inputAdsOwner" class="form-label">ID Penjual</label>
+                        <input type="number" class="form-control" id="inputAdsOwner" required formControlName="ownerId">
+                    </div>
+
+                    <!-- ADS TITLE -->
+                    <div class="mb-3">
+                        <label for="inputAdsName" class="form-label">Judul Iklan</label>
+                        <input type="text" class="form-control" id="inputAdsName" required formControlName="adsName">
+                    </div>
+
+                    <!-- CAR BRAND -->
+                    <div class="mb-3">
+                        <label for="inputAdsBrand" class="form-label">Brand Mobil</label>
+                        <input type="text" class="form-control" id="inputAdsBrand" required formControlName="adsBrand">
+                    </div>
+
+                    <!-- CAR YEAR -->
+                    <div class="mb-3">
+                        <label for="inputAdsYear" class="form-label">Tahun Produksi Mobil</label>
+                        <input type="number" class="form-control" id="inputAdsYear" required formControlName="adsYear">
+                    </div>
+
+                    <!-- CAR COLOR -->
+                    <div class="mb-3">
+                        <label for="inputAdsColor" class="form-label">Warna Mobil</label>
+                        <input type="text" class="form-control" id="inputAdsColor" required formControlName="adsColor">
+                    </div>
+
+                    <!-- CAR LOCATION -->
+                    <div class="mb-3">
+                        <label for="inputAdsLocation" class="form-label">Lokasi Mobil</label>
+                        <input type="text" class="form-control" id="inputAdsLocation" required
+                            formControlName="adsLocation">
+                    </div>
+
+                    <!-- CAR STATUS -->
+                    <label class="form-label">Status Ketersediaan Mobil</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="inputAdsSoldFalse" formControlName="adsSold"
+                            [value]="0">
+                        <label class="form-check-label text-success" for="inputAdsSoldFalse">
+                            TERSEDIA
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="inputAdsSoldTrue" formControlName="adsSold"
+                            [value]="1">
+                        <label class="form-check-label text-danger" for="inputAdsSoldTrue">
+                            TERJUAL
+                        </label>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <!-- CAR PHOTO -->
+                    <div class="mb-3">
+                        <label for="inputAdsPhoto" class="form-label">URL Foto Mobil</label>
+                        <textarea class="form-control mb-3" id="inputAdsPhoto" rows="3" formControlName="adsPhoto"
+                            #adsPhoto (change)="previewAdsImage(adsPhoto.value)"></textarea>
+                        <label class="form-label">Preview Foto</label>
+                        <div class="w-50">
+                            <img [src]="previewImageUrl" class="card-img-top img-responsive br-7">
+                        </div>
+                    </div>
+
+                    <!-- CAR PRICE -->
+                    <div class="mb-3">
+                        <label for="inputAdsPrice" class="form-label">Harga Jual Mobil</label>
+                        <input type="text" class="form-control" id="inputAdsPrice" required formControlName="adsPrice">
+                    </div>
+
+
+
+                    <!-- ADS DESC -->
+                    <div class="mb-3 mt-1">
+                        <label for="inputAdsDesc" class="form-label">Deskripsi Iklan</label>
+                        <textarea class="form-control" id="inputAdsDesc" rows="6" formControlName="adsDesc"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="text-end">
+                <div>
+                    <button *ngIf="action == 'new'" type="submit" class="btn btn-primary"><i
+                            class="bi bi-send-fill"></i>
+                        Simpan Iklan </button>
+                    <button *ngIf="action == 'edit'" type="submit" class="btn btn-success"><i class="bi bi-upload"></i>
+                        Update Iklan </button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>

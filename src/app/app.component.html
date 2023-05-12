@@ -1,0 +1,16 @@
+<main>
+  <nav class="navbar navbar-light bg-light">
+    <div class="container">
+      <h3 class="mt-2"><b><a [routerLink]="['/']" style="text-decoration: none;"><i class="bi bi-car-front-fill"></i>
+            JualMobil.com</a></b></h3>
+      <div class="d-flex">
+        <a class="me-2" [routerLink]="['/']" style="text-decoration: none;">Home Page</a> |
+        <a class="ms-2" [routerLink]="['/admin']" style="text-decoration: none;">Admin Page</a>
+      </div>
+    </div>
+  </nav>
+  <section class="content">
+    <!-- <app-home></app-home> -->
+    <router-outlet></router-outlet>
+  </section>
+</main>

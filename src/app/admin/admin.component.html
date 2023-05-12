@@ -1,0 +1,28 @@
+<article class="container">
+    <nav class="bg-light br-10 p-3 mt-3 mb-4">
+        <button class="btn btn-primary" type="button" (click)="newAds()">
+            <i class="bi bi-folder-plus"></i> <span class="ms-3">Posting iklan baru</span>
+        </button>
+    </nav>
+    <h5 class="fw-bold">Data Iklan Terposting</h5>
+    <app-admin-ads-card *ngFor="let data of ads" [ads]="data"></app-admin-ads-card>
+
+
+</article>
+<div class="modal" tabindex="-1" id="modalEditAds">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Modal body text goes here.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>

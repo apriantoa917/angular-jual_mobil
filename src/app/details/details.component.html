@@ -1,0 +1,54 @@
+<article class="container">
+    <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);"
+        aria-label="breadcrumb" class="bg-light br-10 p-3 mt-3 mb-4">
+        <ol class="breadcrumb" style="margin-bottom: 0;">
+            <li class="breadcrumb-item"><a href="#" style="text-decoration: none;"><i class="bi bi-house-door-fill"></i>
+                    Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{adsParams.name}}</li>
+        </ol>
+    </nav>
+
+    <div class="row my-4">
+        <section class="col-sm-7">
+            <app-ads-info [adsData]="adsParams"></app-ads-info>
+        </section>
+        <section class="col-sm-5">
+            <div class="card alert alert-info br-10">
+                <h5><b>Tertarik dengan Unit ini?</b></h5>
+                <p>Kamu dapat melakukan pemesanan (booking) unit dengan mengisi form berikut.</p>
+                <!-- 
+                    [formGroup]="offeringForm" -> diisi dengan nama variable yang memuat input name di file ts
+                    (submit)="submitOffering()" -> mengarahkan ke event handling di file ts 
+                    formControlName="fullName" -> nama variabel yang diinputkan di "offeringForm" di file ts
+                 -->
+                <form [formGroup]="offeringForm" (submit)="submitOffering()">
+                    <div class="mb-3">
+                        <label for="userFullName" class="form-label">Nama Lengkap</label>
+                        <input class="form-control" id="userFullName" formControlName="fullName" type="text"
+                            placeholder="Contoh : Susi Susanti" aria-label="default user full name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="userBid" class="form-label">Harga Penawaran / Nego</label>
+                        <input type="number" class="form-control" id="userEmail" formControlName="bid"
+                            aria-describedby="userEmailHelp" placeholder="Contoh : 100000000">
+                        <div id="userEmailHelp" class="form-text">Silahkan isikan nominal penawaran yang Anda ajukan.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="userEmail" class="form-label">Alamat Email</label>
+                        <input type="email" class="form-control" id="userEmail" formControlName="email"
+                            aria-describedby="userEmailHelp" placeholder="Contoh : Susi@susanti.com">
+                        <div id="userEmailHelp" class="form-text">Kami akan mengabari anda jika penjual tertarik dengan
+                            penawaran yang Anda ajukan
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <button type="submit" class="btn btn-primary"><i class="bi bi-send-fill"></i> Ajukan
+                            Penawaran</button>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+    </div>
+</article>

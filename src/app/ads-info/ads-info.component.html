@@ -1,0 +1,44 @@
+<section class="mb-3">
+    <img id="ads-image" class="w-100 mx-auto d-block" [src]="adsData.photo" alt="Exterior photo of {{adsData.photo}}" />
+
+    <div id="ads-detail-container" class=" p-4">
+        <h4 class="mb-3"><b>{{adsData.name}}</b></h4>
+        <table class="table table-responsive">
+            <tr>
+                <td style="width: 30%;"><b>Brand</b></td>
+                <td>{{adsData.brand}}</td>
+            </tr>
+            <tr>
+                <td><b>Tahun</b></td>
+                <td>{{adsData.year}}</td>
+            </tr>
+            <tr>
+                <td><b>Warna</b></td>
+                <td>{{adsData.color}}</td>
+            </tr>
+            <tr>
+                <td><b>Harga Jual</b></td>
+                <td>{{adsData.price | currency:'Rp':'symbol':'3.0'}}</td>
+            </tr>
+            <tr>
+                <td><b>Lokasi</b></td>
+                <td>{{adsData.location}}</td>
+            </tr>
+            <tr>
+                <td><b>Stok</b></td>
+                <td>
+                    <div *ngIf="!adsData.sold">
+                        <span class="badge rounded-pill bg-success">TERSEDIA</span>
+                    </div>
+                    <div *ngIf="adsData.sold">
+                        <span class="badge rounded-pill bg-danger">TERJUAL</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><b>Deskripsi</b></td>
+                <td>{{adsData.desc}}</td>
+            </tr>
+        </table>
+    </div>
+</section>

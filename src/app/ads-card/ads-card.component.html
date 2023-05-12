@@ -1,0 +1,18 @@
+<!-- <section class="listing">
+    <img class="listing-photo" [src]="carBrand.photo" alt="Exterior photo of {{carBrand.photo}}">
+    <h3 class="listing-heading">{{ carBrand.name }}</h3>
+    <p class="listing-brand pl-5"><img src="../../assets/car.svg" width="30" alt="">dcd</p>
+    <p class="listing-location">{{ carBrand.brand}}, {{carBrand.city }}</p>
+</section> -->
+
+<section class="col">
+    <div class="card" (click)="viewDetails(ads.id)">
+        <img [src]="ads.photo" class="card-img-top img-responsive" alt="Exterior photo of {{ads.photo}}">
+        <div class="card-body ">
+            <h5 class="card-title fw-bold  text-truncate">{{ ads.name }}</h5>
+            <p class="card-text mb-2"><i class="bi bi-car-front-fill"></i> {{ ads.brand}}</p>
+            <p class="card-text mb-2"><i class="bi bi-geo-alt"></i> {{ ads.location}}</p>
+            <p class="card-text"><i class="bi bi-coin"></i> {{ ads.price | currency:'Rp':'symbol':'3.0'}}</p>
+        </div>
+    </div>
+</section>
